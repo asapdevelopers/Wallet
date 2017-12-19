@@ -33,7 +33,7 @@ For a list of frequently asked questions please visit the [asapdevelopers.com Wa
 Clone the repo and open the directory:
 
 ```sh
-git clone https://github.com/Bitcoin-com/Wallet.git
+git clone https://github.com/asapdevelopers/Wallet.git
 cd Wallet
 ```
 
