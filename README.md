@@ -1,10 +1,10 @@
-The Bitcoin.com wallet is a fork of the Copay Wallet (https://github.com/bitpay/copay).
+The ASAP wallet is a fork of the Copay Wallet (https://github.com/bitpay/copay).
 
-The Bitcoin.com wallet is a secure bitcoin wallet platform for both desktop and mobile devices. It uses [Bitcore Wallet Service](https://github.com/Bitcoin-com/bitcore-wallet-service) (our fork of the [Bitpay Bitcore Wallet Service](https://github.com/bitpay/bitcore-wallet-service)) (BWS) for peer synchronization and network interfacing.
+The ASAP wallet is a secure bitcoin wallet platform for both desktop and mobile devices. It uses [Bitcore Wallet Service](https://github.com/Bitcoin-com/bitcore-wallet-service) (our fork of the [Bitpay Bitcore Wallet Service](https://github.com/bitpay/bitcore-wallet-service)) (BWS) for peer synchronization and network interfacing.
 
-Binary versions of The Bitcoin.com wallet are available for download at [Bitcoin.com](https://www.bitcoin.com/choose-your-wallet/bitcoin-com-wallet).
+Binary versions of The ASAP wallet are available for download at [asapdevelopers.com](https://www.asapdevelopers.com/).
 
-For a list of frequently asked questions please visit the [Bitcoin.com Wallet FAQ](https://walletsupport.bitcoin.com/).
+For a list of frequently asked questions please visit the [asapdevelopers.com Wallet FAQ](https://walletsupport.bitcoin.com/).
 
 ## Main Features
 
@@ -28,7 +28,7 @@ For a list of frequently asked questions please visit the [Bitcoin.com Wallet FA
 
 ## Testing in a Browser
 
-> **Note:** This method should only be used for development purposes. When running the Bitcoin.com wallet in a normal browser environment, browser extensions and other malicious code might have access to internal data and private keys.
+> **Note:** This method should only be used for development purposes. When running the ASAP wallet in a normal browser environment, browser extensions and other malicious code might have access to internal data and private keys.
 
 Clone the repo and open the directory:
 
@@ -37,10 +37,10 @@ git clone https://github.com/Bitcoin-com/Wallet.git
 cd Wallet
 ```
 
-Ensure you have [Node](https://nodejs.org/) installed, then install and start the Bitcoin.com wallet:
+Ensure you have [Node](https://nodejs.org/) installed, then install and start the ASAP wallet:
 
 ```sh
-npm run apply:bitcoincom
+npm run apply:asapdevelopers
 npm start
 ```
 
@@ -63,7 +63,7 @@ Follow the [Cordova Android Platform Guide](https://cordova.apache.org/docs/en/l
 When your developement enviroment is ready, run the `start:android` npm package script.
 
 ```sh
-npm run apply:bitcoincom
+npm run apply:asapdevelopers
 npm run start:android
 ```
 
@@ -74,22 +74,22 @@ Follow the [Cordova iOS Platform Guide](https://cordova.apache.org/docs/en/lates
 When your developement enviroment is ready, run the `start:ios` npm package script.
 
 ```sh
-npm run apply:bitcoincom
+npm run apply:asapdevelopers
 npm run start:ios
 ```
 
 ### Desktop (Linux, macOS, and Windows)
 
-The desktop version of the Bitcoin.com wallet currently uses NW.js, an app runtime based on Chromium. To get started, first install NW.js on your system from [the NW.js website](https://nwjs.io/).
+The desktop version of the ASAP wallet currently uses NW.js, an app runtime based on Chromium. To get started, first install NW.js on your system from [the NW.js website](https://nwjs.io/).
 
 When NW.js is installed, run the `start:desktop` npm package script.
 
 ```sh
-npm run apply:bitcoin.com
+npm run apply:asapdevelopers.com
 npm run start:desktop
 ```
 
-## Build Bitcoin.com wallet App Bundles
+## Build ASAP wallet App Bundles
 
 Before building the release version for a platform, run the `clean-all` command to delete any untracked files in your current working directory. (Be sure to stash any uncommited changes you've made.) This guarantees consistency across builds for the current state of this repository.
 
@@ -99,7 +99,7 @@ The `final` commands build the production version of the app, and bundle it with
 
 ```sh
 npm run clean-all
-npm run apply:bitcoincom
+npm run apply:asapdevelopers
 npm run final:android
 ```
 
@@ -107,7 +107,7 @@ npm run final:android
 
 ```sh
 npm run clean-all
-npm run apply:bitcoincom
+npm run apply:asapdevelopers
 npm run final:ios
 ```
 
@@ -115,39 +115,39 @@ npm run final:ios
 
 ```sh
 npm run clean-all
-npm run apply:bitcoincom
+npm run apply:asapdevelopers
 npm run final:desktop
 ```
 
-## About The Bitcoin.com Wallet
+## About The ASAP Wallet
 
 ### General
 
-The Bitcoin.com wallet implements a multisig wallet using [p2sh](https://en.bitcoin.it/wiki/Pay_to_script_hash) addresses.  It supports multiple wallets, each with its own configuration, such as 3-of-5 (3 required signatures from 5 participant peers) or 2-of-3.  To create a multisig wallet shared between multiple participants, the Bitcoin.com wallet requires the extended public keys of all the wallet participants.  Those public keys are then incorporated into the wallet configuration and combined to generate a payment address where funds can be sent into the wallet.  Conversely, each participant manages their own private key and that private key is never transmitted anywhere.
+The ASAP wallet implements a multisig wallet using [p2sh](https://en.bitcoin.it/wiki/Pay_to_script_hash) addresses.  It supports multiple wallets, each with its own configuration, such as 3-of-5 (3 required signatures from 5 participant peers) or 2-of-3.  To create a multisig wallet shared between multiple participants, the ASAP wallet requires the extended public keys of all the wallet participants.  Those public keys are then incorporated into the wallet configuration and combined to generate a payment address where funds can be sent into the wallet.  Conversely, each participant manages their own private key and that private key is never transmitted anywhere.
 
 To unlock a payment and spend the wallet's funds, a quorum of participant signatures must be collected and assembled in the transaction.  The funds cannot be spent without at least the minimum number of signatures required by the wallet configuration (2-of-3, 3-of-5, 6-of-6, etc.).  Once a transaction proposal is created, the proposal is distributed among the wallet participants for each to sign the transaction locally.  Finally, when the transaction is signed, the last signing participant will broadcast the transaction to the Bitcoin network.
 
-The Bitcoin.com wallet also implements [BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) to generate new addresses for peers.  The public key that each participant contributes to the wallet is a BIP32 extended public key.  As additional public keys are needed for wallet operations (to produce new addresses to receive payments into the wallet, for example) new public keys can be derived from the participants' original extended public keys.  Once again, it's important to stress that each participant keeps their own private keys locally - private keys are not shared - and are used to sign transaction proposals to make payments from the shared wallet.
+The ASAP wallet also implements [BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) to generate new addresses for peers.  The public key that each participant contributes to the wallet is a BIP32 extended public key.  As additional public keys are needed for wallet operations (to produce new addresses to receive payments into the wallet, for example) new public keys can be derived from the participants' original extended public keys.  Once again, it's important to stress that each participant keeps their own private keys locally - private keys are not shared - and are used to sign transaction proposals to make payments from the shared wallet.
 
 For more information regarding how addresses are generated using this procedure, see: [Structure for Deterministic P2SH Multisignature Wallets](https://github.com/bitcoin/bips/blob/master/bip-0045.mediawiki).
 
-## Bitcoin.com Wallet Backups and Recovery
+## ASAP Wallet Backups and Recovery
 
-The Bitcoin.com wallet uses BIP39 mnemonics for backing up wallets.  The BIP44 standard is used for wallet address derivation. Multisig wallets use P2SH addresses, while non-multisig wallets use P2PKH.
+The ASAP wallet uses BIP39 mnemonics for backing up wallets.  The BIP44 standard is used for wallet address derivation. Multisig wallets use P2SH addresses, while non-multisig wallets use P2PKH.
 
 ## Wallet Export Format
 
-The Bitcoin.com wallet encrypts the backup with the [Stanford JS Crypto Library](http://bitwiseshiftleft.github.io/sjcl/).  To extract the private key of your wallet you can use https://bitwiseshiftleft.github.io/sjcl/demo/, copy the backup to 'ciphertext' and enter your password.  The resulting JSON will have a key named: `xPrivKey`, that is the extended private key of your wallet.  That information is enough to sign any transaction from your wallet, so be careful when handling it!
+The ASAP wallet encrypts the backup with the [Stanford JS Crypto Library](http://bitwiseshiftleft.github.io/sjcl/).  To extract the private key of your wallet you can use https://bitwiseshiftleft.github.io/sjcl/demo/, copy the backup to 'ciphertext' and enter your password.  The resulting JSON will have a key named: `xPrivKey`, that is the extended private key of your wallet.  That information is enough to sign any transaction from your wallet, so be careful when handling it!
 
 Using a tool like [Bitcore PlayGround](http://bitcore.io/playground) all wallet addresses can be generated. (TIP: Use the `Address` section for P2PKH address type wallets and `Multisig Address` for P2SH address type wallets). For multisig addresses, the required number of signatures (key `m` on the export) is also needed to recreate the addresses.
 
 
 ## Bitcore Wallet Service
 
-The Bitcoin.com wallet depends on [Bitcore Wallet Service](https://github.com/Bitcoin-com/bitcore-wallet-service) (BWS) for blockchain information, networking and synchronization.  A BWS instance can be setup and operational within minutes or you can use a public instance like `https://bws.bitcoin.com`.  Switching between BWS instances is very simple and can be done with a click from within the wallet.  BWS also allows the Bitcoin.com wallet to interoperate with other wallets like [Bitcore Wallet CLI] (https://github.com/bitpay/bitcore-wallet).
+The ASAP wallet depends on [Bitcore Wallet Service](https://github.com/Bitcoin-com/bitcore-wallet-service) (BWS) for blockchain information, networking and synchronization.  A BWS instance can be setup and operational within minutes or you can use a public instance like `https://bws.bitcoin.com`.  Switching between BWS instances is very simple and can be done with a click from within the wallet.  BWS also allows the ASAP wallet to interoperate with other wallets like [Bitcore Wallet CLI] (https://github.com/bitpay/bitcore-wallet).
 
 ## Translations
-The Bitcoin.com wallet uses standard gettext PO files for translations and [Crowdin](https://crowdin.com/project/bitcoincom-wallet) as the front-end tool for translators.  To join our team of translators, please create an account at [Crowdin](https://crowdin.com) and translate the Bitcoin.com wallet documentation and application text into your native language.
+The ASAP wallet uses standard gettext PO files for translations and [Crowdin](https://crowdin.com/project/bitcoincom-wallet) as the front-end tool for translators.  To join our team of translators, please create an account at [Crowdin](https://crowdin.com) and translate the ASAP wallet documentation and application text into your native language.
 
 To download and build using the latest translations from Crowdin, please use the following commands:
 
