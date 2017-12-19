@@ -1,10 +1,8 @@
-The ASAP wallet is a fork of the Copay Wallet (https://github.com/bitpay/copay).
+The ASAP wallet is a fork of the Bitcoin.com Wallet (https://github.com/Bitcoin-com/Wallet).
 
-The ASAP wallet is a secure bitcoin wallet platform for both desktop and mobile devices. It uses [Bitcore Wallet Service](https://github.com/Bitcoin-com/bitcore-wallet-service) (our fork of the [Bitpay Bitcore Wallet Service](https://github.com/bitpay/bitcore-wallet-service)) (BWS) for peer synchronization and network interfacing.
+The ASAP wallet is a secure bitcoin wallet platform for both desktop and mobile devices. It uses [Bitcore Wallet Service](https://github.com/Bitcoin-com/bitcore-wallet-service) (a fork of the [Bitpay Bitcore Wallet Service](https://github.com/bitpay/bitcore-wallet-service)) (BWS) for peer synchronization and network interfacing.
 
 Binary versions of The ASAP wallet are available for download at [asapdevelopers.com](https://www.asapdevelopers.com/).
-
-For a list of frequently asked questions please visit the [asapdevelopers.com Wallet FAQ](https://walletsupport.bitcoin.com/).
 
 ## Main Features
 
