@@ -30,6 +30,9 @@ angular.module('copayApp.services').factory('configService', function(storageSer
       },
       bitcoincom: {
         url: 'https://wallet.bitcoin.com'
+      },
+      asapdevelopers: {
+        url: 'https://asapdevelopers.com'
       }
     },
 
@@ -52,6 +55,11 @@ angular.module('copayApp.services').factory('configService', function(storageSer
       bitcoincom: {
         ios: 'http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=1252903728&pageNumber=0&sortOrdering=2&type=Purple+Software&mt=8',
         android: 'https://play.google.com/store/apps/details?id=com.bitcoin.mwallet',
+        wp: ''
+      },
+      asapdevelopers: {
+        ios: 'http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=1327519957&pageNumber=0&sortOrdering=2&type=Purple+Software&mt=8',
+        android: 'https://play.google.com/store/apps/details?id=com.asap.mwallet',
         wp: ''
       }
     },
@@ -93,7 +101,7 @@ angular.module('copayApp.services').factory('configService', function(storageSer
     },
 
     release: {
-      url: 'https://api.github.com/repos/Bitcoin-com/Wallet/releases/latest'
+      url: 'https://api.github.com/repos/asapdevelopers/Wallet/releases/latest'
     },
 
     pushNotificationsEnabled: true,
@@ -112,8 +120,8 @@ angular.module('copayApp.services').factory('configService', function(storageSer
 
     bitcoinAlias: 'btc',
     bitcoinCashAlias: 'bch',
-    bitcoinWalletColor: '#fab915', // Observatory
-    bitcoinCashWalletColor: '#26B03C' // Dollar Green
+    bitcoinWalletColor: '#CE1337', // Observatory
+    bitcoinCashWalletColor: '#7ED321' // Dollar Green
   };
 
   var configCache = null;
