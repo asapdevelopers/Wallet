@@ -18,14 +18,14 @@ angular.module('copayApp.services').factory('bitcoincomService', function($http,
 
   var homeItem = {
     name: 'bitcoincom',
-    title: 'Explore Bitcoin.com',
+    title: 'Explore ASAP',
     icon: 'icon-bitcoincom',
     sref: 'tabs.bitcoin-com',
   };
 
   var nextStepItem = {
     name: 'bitcoincom',
-    title: 'Explore Bitcoin.com',
+    title: 'Explore ASAP',
     icon: 'icon-bitcoincom',
     sref: 'tabs.bitcoin-com',
   };
